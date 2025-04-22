@@ -4,9 +4,9 @@
 export const metadata = {
     title: 'Vortex Gaming',
     icons: {
-        icon: '/Vortex_Gaming_logo-removebg-preview.png',
-        shortcut: '/Vortex_Gaming_logo-removebg-preview.png',
-        apple: '/Vortex_Gaming_logo-removebg-preview.png'
+        icon: '/favicon.ico',
+        shortcut: '/favicon.ico',
+        apple: '/favicon.ico'
     }
 };
 
