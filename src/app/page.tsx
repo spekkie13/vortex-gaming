@@ -3,6 +3,11 @@
 // Page-specific metadata overrides layout metadata
 export const metadata = {
     title: 'Vortex Gaming',
+    icons: {
+        icon: '/Vortex_Gaming_logo-removebg-preview.png',
+        shortcut: '/Vortex_Gaming_logo-removebg-preview.png',
+        apple: '/Vortex_Gaming_logo-removebg-preview.png'
+    }
 };
 
 import Image from 'next/image';
