@@ -35,7 +35,6 @@ export default function Navbar() {
                 <Link href="/accomplishments" className="text-gray-700 dark:text-gray-300 hover:underline">
                     Accomplishments
                 </Link>
-                <ThemeToggle />
             </div>
         </nav>
     )
