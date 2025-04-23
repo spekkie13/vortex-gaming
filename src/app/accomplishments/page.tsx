@@ -23,9 +23,10 @@ export default function AccomplishmentsPage() {
         px-4 py-8
       "
         >
-            <h2 className="text-3xl font-bold text-primary dark:text-white mb-6">
+            <h2 className="text-3xl font-bold text-primary dark:text-white mb-6 max-w-xl mx-auto text-center">
                 Accomplishments
             </h2>
+
 
             <ul className="space-y-4 max-w-xl mx-auto">
                 {achievements.map((a, idx) => (
