@@ -1,2 +1,11 @@
-@import "tailwindcss/preflight";
-@import "tailwindcss/utilities";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Enforce page-wide background & text color */
+html {
+    @apply bg-white text-gray-900;
+}
+html.dark {
+    @apply bg-gray-900 text-gray-100;
+}

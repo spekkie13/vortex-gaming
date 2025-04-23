@@ -1,25 +1,51 @@
-"use client";
+// components/ThemeToggle.tsx
+'use client';
 
-import { useTheme } from 'next-themes';
-import { useEffect, useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function ThemeToggle() {
-    const { theme, setTheme } = useTheme();
-    const [mounted, setMounted] = useState(false);
+    const [theme, setTheme] = useState<'light'|'dark'>('light');
 
+    // On mount: load or detect
     useEffect(() => {
-        setMounted(true);
+        const saved = localStorage.getItem('theme');
+        let initial: 'light'|'dark';
+        if (saved === 'light' || saved === 'dark') {
+            initial = saved;
+        } else {
+            initial = window.matchMedia('(prefers-color-scheme: dark)').matches
+                ? 'dark'
+                : 'light';
+        }
+        applyTheme(initial);
+        setTheme(initial);
     }, []);
 
-    if (!mounted) return null;
+    // helper to apply + persist
+    function applyTheme(newTheme: 'light'|'dark') {
+        document.documentElement.classList.toggle('dark', newTheme === 'dark');
+        localStorage.setItem('theme', newTheme);
+    }
+
+    function toggle() {
+        const nxt = theme === 'dark' ? 'light' : 'dark';
+        applyTheme(nxt);
+        setTheme(nxt);
+    }
 
     return (
         <button
-            onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
-            className="p-2 rounded-full bg-gray-200 dark:bg-gray-700"
-            aria-label="Toggle Theme"
+            onClick={toggle}
+            aria-label="Toggle Dark Mode"
+            className="
+        p-2 rounded-full
+        bg-gray-200 dark:bg-gray-700
+        hover:bg-gray-300 dark:hover:bg-gray-600
+        text-gray-800 dark:text-gray-200
+        transition-colors duration-200
+      "
         >
-            {theme === 'light' ? '🌙' : '☀️'}
+            {theme === 'light' ? '☀️' : '🌙'}
         </button>
     );
 }
