@@ -1,7 +1,16 @@
 module.exports = {
-    content: ["./src/**/*.{js,jsx,ts,tsx}", "./components/**/*.{js,jsx,ts,tsx}"],
+    darkMode: 'class',
+    content: [
+        './app/**/*.{ts,tsx}',
+        './components/**/*.{ts,tsx}'
+    ],
     theme: {
-        extend: {},
+        extend: {
+            colors: {
+                primary: '#1F2937', // update to match logo
+                accent: '#F59E0B',  // update to match logo
+            },
+        },
     },
     plugins: [],
-}
+};
