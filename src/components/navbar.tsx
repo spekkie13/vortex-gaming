@@ -9,7 +9,7 @@ export default function Navbar() {
                 <Link href="/">
                     <a className="flex items-center">
                         <Image
-                            src="/Vortex_Gaming_logo.png"
+                            src="/Vortex_Gaming_Logo.png"
                             alt="Vortex Gaming Logo"
                             width={40}
                             height={40}
