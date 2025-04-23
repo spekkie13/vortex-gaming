@@ -17,7 +17,7 @@ export default function HomePage() {
         <main className="flex min-h-screen items-center justify-center bg-gray-900 text-white">
             <div className="text-center">
                 <Image
-                    src="/Vortex_Gaming_logo-removebg-preview.png"
+                    src="/Vortex_Gaming_Logo.png"
                     alt="Vortex Gaming Logo"
                     width={200}
                     height={200}
