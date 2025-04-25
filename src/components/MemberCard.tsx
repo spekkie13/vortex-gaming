@@ -14,7 +14,7 @@ interface TeamMemberCardProps {
     socials?: SocialLink[];
 }
 
-export default function TeamMemberCard({
+export default function MemberCard({
                                            name,
                                            one_liner,
                                            imageUrl,
