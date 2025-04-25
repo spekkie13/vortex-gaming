@@ -151,7 +151,7 @@ const players: Record<string, Player> = {
         },
     },
     'player-nine': {
-        name: 'Player Nine',
+        name: 'Tetsuo',
         slogan: 'When you need him, he\'s there.',
         bio:
             'Tetsuo is the ultimate sub — always prepared to step in and get the job done. Whether it’s a clutch moment or a backup role, you can count on him every time.',
