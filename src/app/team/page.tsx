@@ -95,22 +95,27 @@ const management = [
         one_liner: 'Manager',
         imageUrl: '/Vortex_Gaming_Logo.png',
         socials: [{ platform: 'Twitter', url: 'https://twitter.com/CocSpartacus' }],
-    }
+    },
 ]
 
 export default function TeamPage() {
     return (
         <section className="
+      min-h-screen
       bg-white dark:bg-gray-900
       text-gray-900 dark:text-gray-100
       transition-colors
       px-4 py-8
     ">
-            <h2 className="text-3xl font-bold mb-6">
+            <h2 className="
+        text-3xl font-bold mb-6
+        max-w-xl mx-auto text-center
+        text-gray-900 dark:text-gray-100
+      ">
                 Our Roster
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
                 {squad.map((p) => (
                     <Link
                         key={p.slug}
@@ -127,10 +132,14 @@ export default function TeamPage() {
                 ))}
             </div>
 
-            <h2 className="text-2xl font-bold mt-12 mb-4">
+            <h2 className="
+        text-2xl font-bold mt-12 mb-4
+        max-w-xl mx-auto text-center
+        text-gray-900 dark:text-gray-100
+      ">
                 Management
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
                 {management.map((p) => (
                     <Link
                         key={p.slug}
@@ -141,7 +150,6 @@ export default function TeamPage() {
               rounded
             "
                     >
-                        {/* Map your tagline into the `role` prop */}
                         <MemberCard
                             name={p.name}
                             one_liner={p.one_liner}

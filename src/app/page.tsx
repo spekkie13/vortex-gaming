@@ -15,31 +15,35 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
     return (
-        <main className="flex min-h-screen items-center justify-center bg-white dark:bg-gray-900
-      text-gray-900 dark:text-gray-100 transition-colors px-4">
-            <div className="text-center max-w-2xl">
+        <main className="
+      flex min-h-screen items-center justify-center
+      bg-white dark:bg-gray-900
+      text-gray-900 dark:text-gray-100
+      transition-colors
+      px-4
+    ">
+            <div className="text-center max-w-2xl space-y-6">
                 <Image
                     src="/Vortex_Gaming_Logo.png"
                     alt="Vortex Gaming Logo"
                     width={200}
                     height={200}
-                    className="mx-auto mb-8"
+                    className="mx-auto"
                 />
 
-                <h1 className="text-5xl font-bold mb-4">
-                    Vortex Gaming
-                </h1>
+                <h1 className="text-5xl font-bold">Vortex Gaming</h1>
 
-                <p className="text-lg leading-relaxed text-gray-800 dark:text-gray-200 mb-4">
-                    Vortex Gaming isn’t just a team — it’s a tight-knit brotherhood of friends turned competitors,
-                    bonded by trust, grind, and a shared love for Clash of Clans. Founded in late January 2025,
-                    we train hard, compete harder — and we never forget to enjoy the ride. Keeping the energy
-                    high, the vibes positive, and the goals crystal clear.
+                <p className="text-lg leading-relaxed">
+                    Vortex Gaming isn’t just a team — it’s a tight-knit brotherhood of friends turned
+                    competitors, bonded by trust, grind, and a shared love for Clash of Clans. Founded in
+                    late January 2025, we train hard, compete harder — and we never forget to enjoy the ride.
+                    Keeping the energy high, the vibes positive, and the goals crystal clear.
                 </p>
 
-                <p className="text-lg leading-relaxed text-gray-800 dark:text-gray-200 mb-8">
-                    Because when it’s match time? We bring the heat — focused, hungry, and ready to outplay
-                    anyone in front of us. Every hit counts. Every base is a puzzle. And we’re here to solve it — together.
+                <p className="text-lg leading-relaxed">
+                    Because when it’s match time? We bring the heat — focused, hungry, and ready to
+                    outplay anyone in front of us. Every hit counts. Every base is a puzzle. And we’re here to
+                    solve it — together.
                 </p>
 
                 <Link
