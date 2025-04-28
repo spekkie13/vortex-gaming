@@ -26,25 +26,12 @@ export default function HomePage() {
                 <Image
                     src="/Vortex_Gaming_Logo.png"
                     alt="Vortex Gaming Logo"
-                    width={200}
-                    height={200}
+                    width={400}
+                    height={400}
                     className="mx-auto"
                 />
 
                 <h1 className="text-5xl font-bold">Vortex Gaming</h1>
-
-                <p className="text-lg leading-relaxed">
-                    Vortex Gaming isn’t just a team — it’s a tight-knit brotherhood of friends turned
-                    competitors, bonded by trust, grind, and a shared love for Clash of Clans. Founded in
-                    late January 2025, we train hard, compete harder — and we never forget to enjoy the ride.
-                    Keeping the energy high, the vibes positive, and the goals crystal clear.
-                </p>
-
-                <p className="text-lg leading-relaxed">
-                    Because when it’s match time? We bring the heat — focused, hungry, and ready to
-                    outplay anyone in front of us. Every hit counts. Every base is a puzzle. And we’re here to
-                    solve it — together.
-                </p>
 
                 <Link
                     href="/team"

@@ -1,3 +1,5 @@
+// app/accomplishments/page.tsx
+
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -14,36 +16,45 @@ const achievements = [
 export default function AccomplishmentsPage() {
     return (
         <section
-            className={
-                "min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 " +
-                "transition-colors px-4 py-8"
-            }
+            className="
+        min-h-screen
+        bg-white dark:bg-gray-900
+        text-gray-900 dark:text-gray-100
+        transition-colors
+        px-4 py-8
+      "
         >
-            <h2
-                className={
-                    "text-3xl font-bold text-primary dark:text-white mb-6 " +
-                    "max-w-xl mx-auto text-center"
-                }
-            >
+            <h2 className="text-3xl md:text-4xl font-bold text-primary dark:text-white mb-6 max-w-xl mx-auto text-center">
                 Accomplishments
             </h2>
 
-            <ul className="space-y-4 max-w-xl mx-auto">
-                {achievements.map((a, idx) => (
-                    <li
-                        key={idx}
-                        className={
-                            "flex justify-between border-b pb-2 " +
-                            "text-gray-900 dark:text-gray-100"
-                        }
-                    >
-                        <span className="font-semibold">{a.event}</span>
-                        <span className="text-gray-700 dark:text-gray-300">
-              {a.year} – {a.result}
-            </span>
-                    </li>
-                ))}
-            </ul>
+            <div className="max-w-xl mx-auto overflow-x-auto">
+                <table className="w-full table-auto border-collapse">
+                    {/* Invisible header row for screen readers */}
+                    <thead className="sr-only">
+                    <tr>
+                        <th>Tournament</th>
+                        <th>Year</th>
+                        <th>Placement</th>
+                    </tr>
+                    </thead>
+                    <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
+                    {achievements.map((a, idx) => (
+                        <tr key={idx}>
+                            <td className="py-3 px-2 text-left font-semibold text-[8px] md:text-[16px]">
+                                {a.event}
+                            </td>
+                            <td className="py-3 px-2 text-left font-semibold text-[8px] md:text-[16px]">
+                                {a.year}
+                            </td>
+                            <td className="py-3 px-2 text-left font-semibold text-[8px] md:text-[16px]">
+                                {a.result}
+                            </td>
+                        </tr>
+                    ))}
+                    </tbody>
+                </table>
+            </div>
         </section>
     );
 }

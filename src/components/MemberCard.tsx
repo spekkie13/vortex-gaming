@@ -2,23 +2,16 @@
 
 import Image from 'next/image';
 
-interface SocialLink {
-    platform: string;
-    url: string;
-}
-
 interface TeamMemberCardProps {
     name: string;
     one_liner: string;
     imageUrl: string;
-    socials?: SocialLink[];
 }
 
 export default function MemberCard({
                                            name,
                                            one_liner,
                                            imageUrl,
-                                           socials = [],
                                        }: TeamMemberCardProps) {
     return (
         <div
@@ -44,22 +37,6 @@ export default function MemberCard({
             <p className="text-sm text-gray-600 dark:text-gray-300">
                 {one_liner}
             </p>
-
-            {socials.length > 0 && (
-                <div className="mt-3 flex justify-center space-x-4">
-                    {socials.map(({ platform, url }) => (
-                        <a
-                            key={platform}
-                            href={url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-gray-500 hover:text-accent transition-colors"
-                        >
-                            {platform}
-                        </a>
-                    ))}
-                </div>
-            )}
         </div>
     );
 }
