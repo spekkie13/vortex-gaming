@@ -19,7 +19,7 @@ export default function MemberCard({
         bg-white dark:bg-gray-800
         border border-gray-200 dark:border-gray-700
         rounded-lg p-4 text-center
-        transition-colors transition-shadow
+        transition-colors
         hover:shadow-lg
       "
         >
