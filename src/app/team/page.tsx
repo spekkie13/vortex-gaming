@@ -3,67 +3,11 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import MemberCard from '../../components/MemberCard'
+import { squad } from '../../../data/playerData'
 
 export const metadata: Metadata = {
     title: 'Team – Vortex Gaming',
 }
-
-const squad = [
-    {
-        slug: 'player-one',
-        name: 'Lord Savage',
-        one_liner: 'Get Lorded',
-        imageUrl: '/Vortex_Gaming_Logo.png',
-    },
-    {
-        slug: 'player-two',
-        name: 'Sem',
-        one_liner: 'Consistency is key',
-        imageUrl: '/Vortex_Gaming_Logo.png',
-    },
-    {
-        slug: 'player-three',
-        name: 'Kenneth',
-        one_liner: 'Low Town Hall GOAT',
-        imageUrl: '/Vortex_Gaming_Logo.png',
-    },
-    {
-        slug: 'player-four',
-        name: 'Shady Dragon',
-        one_liner: 'Clutch Moments',
-        imageUrl: '/Vortex_Gaming_Logo.png',
-    },
-    {
-        slug: 'player-five',
-        name: 'Shady WarDaddy',
-        one_liner: 'No Pressure',
-        imageUrl: '/Vortex_Gaming_Logo.png',
-    },
-    {
-        slug: 'player-six',
-        name: 'Shady Jan',
-        one_liner: 'The quiet strength',
-        imageUrl: '/Vortex_Gaming_Logo.png',
-    },
-    {
-        slug: 'player-seven',
-        name: 'Puf',
-        one_liner: 'Dangerous',
-        imageUrl: '/Vortex_Gaming_Logo.png',
-    },
-    {
-        slug: 'player-eight',
-        name: 'FC Wizard',
-        one_liner: 'The name says it all',
-        imageUrl: '/Vortex_Gaming_Logo.png',
-    },
-    {
-        slug: 'player-nine',
-        name: 'Tetsuo',
-        one_liner: 'Always Ready',
-        imageUrl: '/Vortex_Gaming_Logo.png',
-    },
-]
 
 export default function TeamPage() {
     return (
@@ -82,7 +26,7 @@ export default function TeamPage() {
                 Our Roster
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
                 {squad.map((p) => (
                     <Link
                         key={p.slug}
@@ -97,8 +41,6 @@ export default function TeamPage() {
                     </Link>
                 ))}
             </div>
-
-
         </section>
     )
 }
