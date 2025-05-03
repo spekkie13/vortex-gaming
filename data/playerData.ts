@@ -127,7 +127,7 @@ export const players: Record<string, Player> = {
         bio: 'N/A',
         imageUrl: '/Vortex_Gaming_Logo.png',
         socials: [
-            { platform: 'Twitter', url: 'https://twitter.com/shadyjulian' },
+            { platform: 'Twitter', url: 'https://twitter.com/shadyulian' },
         ]
     }
 };
