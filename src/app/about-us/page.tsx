@@ -2,29 +2,9 @@
 
 import Link from "next/link";
 import MemberCard from "@/components/MemberCard";
+import { management } from '../../../data/managementData'
 
 export default function AboutUs() {
-    const management = [
-        {
-            slug: 'manager-one',
-            name: 'Roel',
-            one_liner: 'Owner',
-            imageUrl: '/Vortex_Gaming_Logo.png',
-        },
-        {
-            slug: 'manager-two',
-            name: 'Spekkie',
-            one_liner: 'Web Developer',
-            imageUrl: '/Vortex_Gaming_Logo.png',
-        },
-        {
-            slug: 'manager-three',
-            name: 'Spartacus',
-            one_liner: 'Manager',
-            imageUrl: '/Vortex_Gaming_Logo.png',
-        },
-    ];
-
     return (
         <section
             className="

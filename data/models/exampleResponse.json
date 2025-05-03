@@ -1,0 +1,34 @@
+{
+  "id": null,
+  "name": "Lord Savage",
+  "accounts": [
+    {
+      "tag": "#8J2UYGUPJ",
+      "name": "Lord Savage"
+    }
+  ],
+  "picture_url": null,
+  "twitter": null,
+  "stats_offense": {
+    "stats_type": "offense",
+    "avg_stars": 2.48,
+    "avg_perc": 91.03,
+    "avg_duration": 139.34,
+    "attacks": 62,
+    "triples": 30,
+    "doubles": 32,
+    "singles": 0,
+    "zeros": 0
+  },
+  "stats_defense": {
+    "stats_type": "defense",
+    "avg_stars": 2.25,
+    "avg_perc": 84.16,
+    "avg_duration": 140.64,
+    "attacks": 61,
+    "triples": 16,
+    "doubles": 44,
+    "singles": 1,
+    "zeros": 0
+  }
+}
